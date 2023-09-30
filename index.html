@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acendify - Youth Empowerment Partners</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+
+    <style>
+      /* snack bar*/
+
+/* Style the snackbar */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible when the showSnackbar() function is called */
+  min-width: 250px; /* Set a minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 to center the snackbar horizontally */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded corners */
+  padding: 16px; /* Padding */
+  position: fixed; /* Fixed position - Sit on top of the page */
+  z-index: 1; /* Specify a stack order */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when the showSnackbar() function is called */
+#snackbar.show {
+  visibility: visible; /* Visible */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animation for fading in the snackbar */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+/* Animation for fading out the snackbar */
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+/* ratings*/
+.ratings {
+  display: inline-block;
+  color: #f5a623;
+  font-size: 1.2em;
+}
+.ratings .stars {
+  margin-bottom: 10px;
+}
+.ratings .stars .glyphicon {
+  font-size: 24px;
+  margin-right: 5px;
+}
+.ratings .label {
+  margin-left: 10px;
+}
+
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+
+
+
+
+    </style>
+</head>
+
+
+<body id="top">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <a href="https://api.whatsapp.com/send?phone=27744491168&text=Hey there, Acendify" class="float" target="_blank">
+  <i class="fa fa-whatsapp my-float"></i>
+  </a>
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">Acendify</a>
+
+      <nav class="navbar container" data-navbar>
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="#service" class="navbar-link" data-nav-link>Services</a>
+          </li>
+
+          <!-- <li>
+            <a href="#project" class="navbar-link" data-nav-link>Project</a>
+          </li> -->
+
+          <li>
+            <a href="#about" class="navbar-link" data-nav-link>About Us</a>
+          </li>
+
+          <li>
+            <a href="#faqs" class="navbar-link" data-nav-link>FAQ's</a>
+          </li>
+
+          
+
+          <!-- <li>
+            <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+          </li> -->
+
+          <li>
+            <a href="#contact" class="navbar-link" data-nav-link>Contact Us</a>
+          </li>
+
+          <!-- <li>
+            <a href="started.html" class="btn btn-primary">Get Started</a>
+          </li> -->
+
+        </ul>
+      </nav>
+
+      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+      </button>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="home" aria-label="hero">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">Acendify - Youth Empowerment Partners</p>
+
+            <h1 class="h1 hero-title">Designed to Empower Youth & Employees</h1>
+
+            <p class="hero-text">
+              We are available for collaborations, workshops, and customized programs designed to empower youth and employees, enabling them to unlock their full potential and contribute positively to their personal growth and organizational success.  
+            </p>
+
+            <!-- <a href="started.html" class="btn btn-primary">Get Started</a> -->
+
+          </div>
+
+          <!-- <figure class="hero-banner">
+            <img src="./assets/images/hero-banner.png" width="720" height="673" alt="hero banner" class="w-100">
+          </figure> -->
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service" id="service" aria-label="service">
+        <div class="container">
+
+          <h2 class="h2 section-title">Services We Provided</h2>
+
+          <p class="section-text">
+           </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon" style="background-color: #13c4a1">
+                  <ion-icon name="chatbox"></ion-icon>
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title"></a>
+                </h3>
+
+                <p class="card-text">
+                  Career narrative counselling and pathfinding for individuals as well as corporate clients.   </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon" style="background-color: #6610f2">
+                  <ion-icon name="desktop"></ion-icon>
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title"></a>
+                </h3>
+
+                <p class="card-text">
+                  Employer Assistance Programs (EAP) to staff of corporate companies where specific pathologies
+            are present hindering the ability to reshape personal narratives. </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon" style="background-color: #ffb700">
+                  <ion-icon name="bulb"></ion-icon>
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title"></a>
+                </h3>
+
+                <p class="card-text">
+                  Individual Psychodynamic Intervention </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon" style="background-color: #fc3549">
+                  <ion-icon name="phone-portrait"></ion-icon>
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title"></a>
+                </h3>
+
+                <p class="card-text">
+                  Mediation Services (Private and commercial) </p>
+
+              </div>
+            </li>
+
+            <!-- <li>
+              <div class="service-card">
+
+                <div class="card-icon" style="background-color: #00d280">
+                  <ion-icon name="archive"></ion-icon>
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Email Marketing</a>
+                </h3>
+
+                <p class="card-text">
+                  Connect with your audience and drive conversions through targeted email campaigns. Our expert team will help you craft effective messages and optimize your results.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon" style="background-color: #ff612f">
+                  <ion-icon name="build"></ion-icon>
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Marketing & Reporting</a>
+                </h3>
+
+                <p class="card-text">
+                  Measure the effectiveness of your marketing efforts with our customized reporting and analytics. We'll help you track your progress and make data-driven decisions for the future.
+                </p>
+
+              </div>
+            </li> -->
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #PROJECT
+      -->
+
+      <!-- <section class="section project" id="project" aria-label="project">
+        <div class="container">
+
+          <h2 class="h2 section-title">Our Recent Projects</h2>
+
+          <p class="section-text">
+            Check out some of our recent marketing projects and see how we've helped businesses like yours achieve success. Let's add you to our list of satisfied clients.
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 510; --height: 700;">
+                  <img src="./assets/images/project-1.jpg" width="510" height="700" loading="lazy"
+                    alt="Designing a better cinema experience" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <p class="card-subtitle">SEO Optimization</p>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Designing a better cinema experience</a>
+                  </h3>
+
+                 
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 510; --height: 700;">
+                  <img src="./assets/images/project-2.jpg" width="510" height="700" loading="lazy"
+                    alt="Building design process within teams" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <p class="card-subtitle">Digital Marketing</p>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Building design process within teams</a>
+                  </h3>
+
+                  
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 510; --height: 700;">
+                  <img src="./assets/images/project-3.jpg" width="510" height="700" loading="lazy"
+                    alt="How intercom brings play into their design process" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <p class="card-subtitle">Keyword Targeting</p>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">How intercom brings play into their design process</a>
+                  </h3>
+
+                 
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 510; --height: 700;">
+                  <img src="./assets/images/project-4.jpg" width="510" height="700" loading="lazy"
+                    alt="Stuck with to-do list, I created a new app for" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <p class="card-subtitle">Email Marketing</p>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Stuck with to-do list, I created a new app for</a>
+                  </h3>
+
+                 
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 510; --height: 700;">
+                  <img src="./assets/images/project-5.jpg" width="510" height="700" loading="lazy"
+                    alt="Examples of different types of sprints" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <p class="card-subtitle">Marketing & Reporting</p>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Examples of different types of sprints</a>
+                  </h3>
+ 
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 510; --height: 700;">
+                  <img src="./assets/images/project-6.jpg" width="510" height="700" loading="lazy"
+                    alt="Redesigning the New York times app" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <p class="card-subtitle">Development</p>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Redesigning the New York times app</a>
+                  </h3>
+
+                 
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section> -->
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+
+          <div class="about-banner img-holder" style="--width: 720; --height: 960;">
+            <img src="./assets/images/about-banner.jpg" width="720" height="960" loading="lazy" alt="about banner"
+              class="img-cover">
+
+            <button class="play-btn" aria-label="Play video">
+              <ion-icon name="play" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
+
+          <div class="about-content">
+
+            <h2 class="h2 section-title">About Us</h2>
+
+            
+
+            <p class="section-text">
+              Acenfidy aims to provide youth with a path towards self-empowerment by unlocking their potential
+              through a series of impactful sessions we conduct with them. We believe that everyone has the
+              potential for greatness but sometimes, finding the potential within can be difficult to achieve. 
+            </p>
+
+            <h3 class="h3">Who We Are</h3>
+
+            <p class="section-text">
+              Using positive psychology and career-focused narrative therapeutic techniques, we intend to allow
+our service users to reshape the constructed narratives they have about themselves and their
+abilities. Through a series of well-crafted techniques, we aim to facilitate the restructuring of the
+harmful narratives standing in the way of their success and personal goal attainment.  </p>
+
+            <h3 class="h3">Our Mission</h3>
+
+            <ul class="about-list">
+
+              <li class="about-item">
+                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                <p class="section-text">
+                  Fostering Self-Discovery: Our mission at Acendify is centered around fostering self-discovery among youth and employees. We are committed to creating an environment where individuals can explore their inner strengths, passions, and capabilities, ultimately helping them gain a deeper understanding of themselves.
+                </p>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                <p class="section-text">
+                  Cultivating Personal Growth: We are dedicated to cultivating personal growth in every individual we work with. Our mission involves providing the tools, resources, and guidance necessary for youth and employees to embark on a transformative journey of self-improvement, enabling them to reach their full potential.
+                </p>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                <p class="section-text">
+                  Driving Organizational Excellence: At Acendify, we firmly believe that empowering individuals leads to organizational excellence. Our mission extends beyond personal development; we aim to make a positive impact on organizations by equipping their youth and employees with the skills, confidence, and mindset needed to contribute effectively to their success and growth.
+                </p>
+              </li>
+
+            </ul>
+
+            <!-- <h3 class="h3">Our Mission</h3>
+
+            <p class="section-text">
+              At Acendify, our mission is to empower youth and enhance organizational excellence through a transformative journey of self-discovery and growth. We believe in the inherent greatness within every individual and are dedicated to helping them uncover their true potential.  </p> -->
+
+            <!-- <div class="container">
+              
+              <div class="ratings">
+                <h3>Overall Rating</h3>
+                <div class="stars">
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <span class="label label-default">4.0</span>
+              </div>
+            </div> -->
+
+          </div>
+
+          
+          
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <!-- <section class="section cta" aria-label="cta" style="background-image: url('./assets/images/cta-bg.jpg')">
+        <div class="container">
+
+          <p class="cta-subtitle">So What is Next?</p>
+
+          <h2 class="h2 section-title">Are You Ready? Let's get to Work!</h2>
+
+          <a href="started.html" class="btn btn-secondary">Get Started</a>
+
+        </div>
+      </section> -->
+
+
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <!-- <section class="section blog" id="blog" aria-label="blog">
+        <div class="container">
+
+          <h2 class="h2 section-title">Latest Articles Updated Weekly</h2>
+
+          <p class="section-text">
+            Stay up-to-date with the latest industry trends and insights through our weekly articles covering a wide range of topics in the world of digital marketing.
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
+                  <img src="./assets/images/blog-1.jpg" width="860" height="646" loading="lazy"
+                    alt="How to Become a Successful Entry Level UX Designer" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <time class="time" datetime="2022-06-16">June 16, 2022</time>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">How to Become a Successful Entry Level UX Designer</a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card grid">
+
+                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
+                  <img src="./assets/images/blog-2.jpg" width="860" height="646" loading="lazy"
+                    alt="2022 Local SEO Success: The Year of Everywhere" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <time class="time" datetime="2022-06-16">June 16, 2022</time>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">2022 Local SEO Success: The Year of Everywhere</a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card grid">
+
+                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
+                  <img src="./assets/images/blog-3.jpg" width="860" height="646" loading="lazy"
+                    alt="The Guide to Running a Client Discovery Process" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <time class="time" datetime="2022-06-16">June 16, 2022</time>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">The Guide to Running a Client Discovery Process</a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card grid">
+
+                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
+                  <img src="./assets/images/blog-4.jpg" width="860" height="646" loading="lazy"
+                    alt="3 Ways to Get Client Approval for Scope Changes" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <time class="time" datetime="2022-06-16">June 16, 2022</time>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">3 Ways to Get Client Approval for Scope Changes</a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card grid">
+
+                <figure class="card-banner img-holder" style="--width: 860; --height: 646;">
+                  <img src="./assets/images/blog-5.jpg" width="860" height="646" loading="lazy"
+                    alt="Top 21 Must-Read Blogs For Creative Agencies" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <time class="time" datetime="2022-06-16">June 16, 2022</time>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Top 21 Must-Read Blogs For Creative Agencies</a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section> -->
+
+
+
+
+
+      <!-- 
+        - #CONTACT
+      -->
+      <section class="faqs" id="faqs" aria-label="faqs" style="margin-left: 10px;margin-right: 10px;">
+
+        <div class="container" style="padding: 10px;">
+
+          <h2 class="h2 section-title">Frequently Asked Questions</h2>
+
+          <p class="section-text">
+            Let us answer some of your questions.
+          </p>
+
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  What is career narrative counselling?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Narrative therapy was developed within the Post-Modern era of therapy and counselling. The
+                  objective of the model is to understand the discourses that exist in individual&#39;s lives which
+                  contribute to their life story. Through identifying the narrative, our highly trained staff is able to
+                  highlight negative narratives which are impacting the individual and hindering their personal growth  
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="padding: 12px;">
+                  How many sessions are best suited for my company?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Narrative counselling is a brief model aimed at achieving outcomes in a short space of time. Once
+                  we understand your needs as a company, and assess your staffing totals and additional factors
+                  such as possible EAP services, we are then able to generate the appropriate service.  
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  How many sessions will I require as an individual seeking counselling?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  
+                  With individual counselling, we offer a 15 min free consult, to ascertain if our model is suited to
+                  your needs. If it is a match, we will require a 1 session asssement whereby at the end we can map
+                  out how many intervention sessions will be needed.
+                  If our model does not align with your needs, Acendify will refer you to an appropriate service where
+                  you are able to access the appropriate services needed.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+           
+
+      </section>
+      
+
+      <section class="section contact" id="contact" aria-label="contact">
+        <div class="container">
+
+          <h2 class="h2 section-title">Get in touch</h2>
+
+          <p class="section-text">
+            Get in touch with us today to discuss how we can help grow your business through 
+          </p>
+
+          <form action="" class="contact-form" onsubmit="showSnackbar();">
+
+            <div class="input-wrapper">
+              <input id="name" type="text" name="name" aria-label="name" placeholder="Your name*" required class="input-field">
+
+              <input id="email" type="email" name="email_address" aria-label="email" placeholder="Email address*" required
+                class="input-field">
+            </div>
+
+            <div class="input-wrapper">
+              <input type="text"  name="subject" id="subject" aria-label="subject" placeholder="Subject" class="input-field">
+
+              <input id="phone_number" type="number" name="phone" aria-label="phone" placeholder="Phone number" class="input-field">
+            </div>
+
+            <textarea name="message" id="message" aria-label="message" placeholder="Your message...*" required
+              class="input-field"></textarea>
+
+            <div class="checkbox-wrapper">
+              <input type="checkbox" name="terms_and_policy" id="terms" required class="checkbox">
+
+              <label for="terms" class="label">
+                Accept <a href="#" class="label-link">Terms of Services</a> and <a href="#" class="label-link">Privacy
+                  Policy</a>
+              </label>
+            </div>
+
+            <button type="submit"  class="btn btn-primary">Send Message</button>
+
+          </form>
+
+           <!--this is for the snack bar-->
+            <div id="snackbar">Thank you for your message. We will get back to you soon.</div>
+          
+
+          <ul class="contact-list">
+
+            <li class="contact-item">
+              <div class="contact-card">
+
+                <div class="card-icon">
+                  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Mail Here</h3>
+
+                  <a href="mailto:nico.stanman@gmail.com" class="card-link">nico.stanman@gmail.com</a>
+                  
+                </div>
+
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-card">
+
+                <div class="card-icon">
+                  <ion-icon name="map-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Visit Here</h3>
+
+                  <address class="card-address">
+                    Acendify Address <br>
+                    7700, Cape Town
+                  </address>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-card">
+
+                <div class="card-icon">
+                  <ion-icon name="headset-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Call Here</h3>
+
+                  <a href="tel:+1234567890" class="card-link">27 74 449 1168</a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <p class="copyright">
+        &copy; 2023 Acendify
+        
+        <!-- <a href="#" class="copyright-link">codewithsadee</a> -->
+      </p>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" aria-label="back to top" data-back-top-btn class="back-top-btn">
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+  <!-- <script src="firebase_script.js"></script> -->
+  <!-- Include the Firebase SDK -->
+ 
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="./message.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

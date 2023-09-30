@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LydiaMarketing - We're available for marketing</title>
+        
+        <!-- 
+          - favicon
+        -->
+        <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+      
+        <!-- 
+          - custom css link
+        -->
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <!-- 
+          - google font link
+        -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+          href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+          rel="stylesheet">
+
+          <style>
+
+
+
+            .team-members {
+  padding: 80px 0;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  margin-bottom: 0;
+}
+
+/* snack bar*/
+
+/* Style the snackbar */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible when the showSnackbar() function is called */
+  min-width: 250px; /* Set a minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 to center the snackbar horizontally */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded corners */
+  padding: 16px; /* Padding */
+  position: fixed; /* Fixed position - Sit on top of the page */
+  z-index: 1; /* Specify a stack order */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when the showSnackbar() function is called */
+#snackbar.show {
+  visibility: visible; /* Visible */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animation for fading in the snackbar */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+/* Animation for fading out the snackbar */
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+.team-section {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+}
+
+.team-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+
+          </style>
+            
+              
+      </head>
+<body>
+    <header class="header" data-header>
+        <div class="container">
+    
+          <a href="#" class="logo">LydiaMarketing</a>
+    
+          <nav class="navbar container" data-navbar>
+            <ul class="navbar-list">
+    
+              <li>
+                <a href="index.html#home" class="navbar-link" data-nav-link>Home</a>
+              </li>
+    
+              <li>
+                <a href="index.html#service" class="navbar-link" data-nav-link>Services</a>
+              </li>
+    
+              <li>
+                <a href="index.html#project" class="navbar-link" data-nav-link>Project</a>
+              </li>
+    
+              <li>
+                <a href="index.html#about" class="navbar-link" data-nav-link>About Us</a>
+              </li>
+    
+              <li>
+                <a href="index.html#blog" class="navbar-link" data-nav-link>Blog</a>
+              </li>
+    
+              <li>
+                <a href="index.html#contact" class="navbar-link" data-nav-link>Contact Us</a>
+              </li>
+    
+              <!-- <li>
+                <a href="#" class="btn btn-primary">Get Started</a>
+              </li> -->
+    
+            </ul>
+          </nav>
+    
+          <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+            <ion-icon name="menu-outline" class="open"></ion-icon>
+            <ion-icon name="close-outline" class="close"></ion-icon>
+          </button>
+    
+        </div>
+      </header>
+
+      <section class="section hero" id="home" aria-label="hero">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">LydiaMarketing Agency</p>
+
+            <h1 class="h1 hero-title">Get Started</h1>
+
+            <p class="hero-text">
+                Our world-class team of experts delivers effective and creative solutions to businesses across various industries. We are committed to helping our clients achieve their goals and take their brands to the next level. Let's get started. </p>
+
+            <!-- <a href="#" class="btn btn-primary">Get Started</a> -->
+
+          </div>
+
+          <figure class="hero-banner">
+            <img src="./assets/images/imgbin_marketing-icon-stock-market-icon-png.png" width="720" height="673" alt="hero banner" class="w-100">
+          </figure>
+
+          <!-- imgbin_marketing-icon-stock-market-icon-png -->
+          
+        </div>
+      </section>
+
+      <section class="team-members" style="margin-top: -140px;">
+        <div class="container">
+          <h2 class="text-center mb-4" style="color: black;">The Executive</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card text-center ">
+                <div class="card-header bg_gradient_tshepo">
+                  <h5 class="card-title" style="color: black;">Aviwe Mpukane</h5>
+                  <p class="card-text">Chief Executive Officer</p>
+                </div>
+                <img src="assets/images/crop_aviwe.jpg" class="card-img-top" alt="CEO">
+                <div class="card-body">
+                  <p class="card-text">Aviwe has over half a decade years of experience in the tech industry and has led several successful startups. He is passionate about using chatbots to improve customer experiences and increase engagement.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card text-center">
+                <div class="card-header bg_gradient_tshepo">
+                  <h5 class="card-title" style="color: black;">Tshepo Ncube</h5>
+                  <p class="card-text">Chief Technology Officer</p>
+                </div>
+                <img src="assets/images/me.jpg" class="card-img-top" alt="CTO">
+                <div class="card-body">
+                  <p class="card-text">Tshepo is an experienced software developer with expertise in website development and chatbot technologies. He has worked on several successful projects and is committed to delivering innovative solutions that exceed client expectations.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card text-center">
+                <div class="card-header bg_gradient_tshepo">
+                  <h5 class="card-title" style="color: black;">Cassandra Johnson</h5>
+                  <p class="card-text">Marketing Lead</p>
+                </div>
+                <img src="assets/images/white_lady.jpg" class="card-img-top" alt="Marketing Lead">
+                <div class="card-body">
+                  <p class="card-text">Cassandra is a seasoned marketing professional with a track record of success in developing and executing marketing strategies that drive business growth. She specializes in using SEO, Social Media & Content Creation strategies to improve customer engagement and increase conversions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <center>
+        <section class="team-section">
+          <div class="container">
+            <h2 style="color: black;">Our Team</h2>
+            <center>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="team-member">
+                    <img src="assets/images/1.jpg" class="img-fluid rounded-circle" alt="Team Member 1">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="team-member">
+                    <img src="assets/images/2.jpg" class="img-fluid rounded-circle" alt="Team Member 2">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="team-member">
+                    <img src="assets/images/3.jpg" class="img-fluid rounded-circle" alt="Team Member 3">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="team-member">
+                    <img src="assets/images/4.jpg" class="img-fluid rounded-circle" alt="Team Member 4">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="team-member">
+                    <img src="assets/images/5.jpg" class="img-fluid rounded-circle" alt="Team Member 5">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="team-member">
+                    <img src="assets/images/6.jpg" class="img-fluid rounded-circle" alt="Team Member 6">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="team-member">
+                    <img src="assets/images/7.jpg" class="img-fluid rounded-circle" alt="Team Member 7">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="team-member">
+                    <img src="assets/images/8.jpg" class="img-fluid rounded-circle" alt="Team Member 8">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="team-member">
+                    <img src="assets/images/9.jpg" class="img-fluid rounded-circle" alt="Team Member 9">
+                  </div>
+                </div>
+                 
+              </div>
+            </center>
+          </div>
+        </section>
+      </center> -->
+      
+
+
+      <!-- <section class="get-started">
+        <div class="container">
+          <h2 class="text-center mb-4">Get Started</h2>
+          <form action="">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="surname">Surname:</label>
+              <input type="text" class="form-control" id="surname" name="surname" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Company Email:</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="options">How can we help you?</label>
+              <select class="form-control" id="options" name="options">
+                <option value="" disabled selected>Select an option</option>
+                <option value="chatbots">Chatbots</option>
+                <option value="marketing">Marketing</option>
+                <option value="website-development">Website Development</option>
+                <option value="website-development">SEO Development</option>
+                <option value="website-development">Consultation</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </section> -->
+
+      <section class="section contact" id="contact" aria-label="contact">
+        <div class="container">
+
+          <h2 class="h2 section-title">Get Started</h2>
+
+          <!-- <p class="section-text">
+            Get in touch with us today to discuss how we can help grow your business through tailored marketing strategies and expert guidance. We're here to help you achieve your goals.
+          </p> -->
+
+          <form action="" class="contact-form" onsubmit="showSnackbar();">
+
+            <div class="input-wrapper">
+              <input id="name" type="text" name="name" aria-label="name" placeholder="Your name*" required class="input-field">
+              
+              <input id="surname" type="text" name="surname" aria-label="surname" placeholder="Your surname*" required class="input-field">
+              
+              <input id="email" type="email" name="email_address" aria-label="email" placeholder="Email address*" required
+                class="input-field">
+            </div>
+
+            <div class="input-wrapper">
+              <!-- <input type="text" name="subject" aria-label="subject" placeholder="Subject" class="input-field"> -->
+
+              <input id="phone_number" type="number" name="phone" aria-label="phone" placeholder="Phone number" class="input-field">
+            </div>
+
+            <div class="form-group">
+                <label for="options">How can we help you?</label>
+                <select class="form-control" id="options" name="options">
+                  <option value="" disabled selected>Select an option</option>
+                  <option value="chatbots">Chatbots</option>
+                  <option value="marketing">Marketing</option>
+                  <option value="website-development">Website Development</option>
+                  <option value="website-development">SEO Development</option>
+                  <option value="website-development">Consultation</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+            <div class="checkbox-wrapper">
+              <input type="checkbox" name="terms_and_policy" id="terms" required class="checkbox">
+
+              <label for="terms" class="label">
+                Accept <a href="#" class="label-link">Terms of Services</a> and <a href="#" class="label-link">Privacy
+                  Policy</a>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Get Started</button>
+
+          </form>
+          <!--this is for the snack bar-->
+          <div id="snackbar">Thank you for choosing us, we will contact you soon</div>
+
+          <ul class="contact-list">
+
+            <li class="contact-item">
+              <div class="contact-card">
+
+                <div class="card-icon">
+                  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Mail Here</h3>
+
+                  <a href="lyd.research@gmail.com" class="card-link">lyd.research@gmail.com</a>
+                  <!-- <a href="mailto:info@luaz.com" class="card-link">info@luaz.com</a> -->
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-card">
+
+                <div class="card-icon">
+                  <ion-icon name="map-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Visit Here</h3>
+
+                  <address class="card-address">
+                    Residence Road,  Rondebosch <br>
+                    7700, Cape Town
+                  </address>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-card">
+
+                <div class="card-icon">
+                  <ion-icon name="headset-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Call Here</h3>
+
+                  <a href="tel:+1234567890" class="card-link">+27 67 924 0455</a>
+                  <a href="tel:+2414524526" class="card-link">+27 63 281 7225</a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+      <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+            
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./mail.js"></script>
+
+     
+      
+      
+    
+</body>
+</html>
