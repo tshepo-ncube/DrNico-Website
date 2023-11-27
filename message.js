@@ -14,6 +14,8 @@ const firebaseConfig = {
   //const app = initializeApp(firebaseConfig);
   //const analytics = getAnalytics(app);
 
+  
+
   // Show the snackbar when the form is submitted
 function showSnackbar() {
     var snackbar = document.getElementById("snackbar");
@@ -29,10 +31,12 @@ function showSnackbar() {
   
     // Get the form data
     var name = document.querySelector('#name').value;
-    var subject = document.querySelector('#subject').value;
-    var email = document.querySelector('#email').value;
-    var message = document.querySelector('#message').value;
-    var phone = document.querySelector('#phone_number').value;
+    var subject = document.getElementById("subject").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+    var phone = document.getElementById("phone_number").value;
+
+    //var name = document.getElementById("name").value
     // // Create a new entry in the database
     // database.ref('submissions').push({
     //   name: name,
@@ -41,27 +45,51 @@ function showSnackbar() {
     //   option: option
     // });
 
-    var newContactForm = contactFormDB.push();
+    // var newContactForm = contactFormDB.push();
 
-    newContactForm.set({
-        name: name,
-        // surname:surname,
-        subject:subject,
-        phone:phone,
-        email: email,
-        message:message,
-        // option: option,
-    });
+    // newContactForm.set({
+    //     name: name,
+    //     // surname:surname,
+    //     subject:subject,
+    //     phone:phone,
+    //     email: email,
+    //     message:message,
+    //     // option: option,
+    // });
   
-    // Clear the form inputs
-    document.querySelector('#name').value = '';
-    // document.querySelector('#surname').value = '';
-    document.querySelector('#email').value = '';
-    // document.querySelector('#options').value = '';
-    document.querySelector('#phone_number').value = '';
+    fetch('https://dr-nico-webserver.onrender.com/submitForm', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: name,
+        subject: subject,
+        email: email,
+        message: message,
+        phoneNumber: phone,
+      }),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+      // Clear the form inputs
+      document.querySelector('#name').value = '';
+      // document.querySelector('#surname').value = '';
+      document.querySelector('#email').value = '';
+      // document.querySelector('#options').value = '';
+      document.querySelector('#phone_number').value = '';
 
-    document.querySelector('#subject').value = '';
-    document.querySelector('#message').value = '';
+      document.querySelector('#subject').value = '';
+      document.querySelector('#message').value = '';
+      // You can handle success response here
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      // You can handle error here
+    });
+
+    
 //     const message = document.createElement('p');
 //   message.textContent = 'Thank you for contacting us. We will get back to you soon.';
 //   form.appendChild(message);
